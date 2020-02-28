@@ -65,23 +65,53 @@ export default function NavBar(props) {
       <HideOnScroll {...props}>
         <AppBar className={classes.appBar}>
           <Toolbar className={classes.toolBar}>
-            <Link onClick={() => scrollToTop()} style={{ cursor: "pointer" }}>
-              <img src={logo} />
-            </Link>
-            <Link
-              style={{ cursor: "pointer" }}
-              activeClass="active"
-              className="scroll-link"
-              to="about"
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              About
-            </Link>
-            <Link>Projects</Link>
+            <Slide in={true} timeout={450}>
+              <img
+                src={logo}
+                onClick={() => scrollToTop()}
+                style={{ cursor: "pointer" }}
+              />
+            </Slide>
+            <Slide in={true} timeout={950}>
+              <Link
+                style={{ cursor: "pointer" }}
+                activeClass="active"
+                className="scroll-link"
+                to="about"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                About
+              </Link>
+            </Slide>
+            <Slide in={true} timeout={1150}>
+              <Link
+                style={{ cursor: "pointer" }}
+                activeClass="active"
+                className="scroll-link"
+                to="projects"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                Projects
+              </Link>
+            </Slide>
             {/* <Link>Experience</Link> */}
-            <Link>Contact</Link>
+            <Slide in={true} timeout={1350}>
+              <Link
+                style={{ cursor: "pointer" }}
+                activeClass="active"
+                className="scroll-link"
+                to="contact"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                Contact
+              </Link>
+            </Slide>
           </Toolbar>
         </AppBar>
       </HideOnScroll>

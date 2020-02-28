@@ -1,27 +1,33 @@
 import React, { useState } from "react";
-import { Grow } from "@material-ui/core/";
-import { makeStyles } from "@material-ui/core/styles";
-import Zoom from "@material-ui/core/Zoom";
-import "./components.css";
+import { Grow, makeStyles } from "@material-ui/core/";
 
-const useStyles = makeStyles(theme => ({
-  
-}));
+import "./components.css";
+import { Waypoint } from "react-waypoint";
+
+const useStyles = makeStyles(theme => ({}));
 
 export default function About(props) {
+  const [animate1, setAnimate1] = useState(false);
+  const [animate2, setAnimate2] = useState(false);
+
+  console.log("about props", props);
   const classes = useStyles();
 
   return (
     <div className="about">
-      <Grow in={props.animate} timeout={700}>
-        <h1>ABOUT ME!!!!</h1>
-      </Grow>
-      <Grow in={props.animate} timeout={1000}>
-        <p>
-          SOME TEXT ABOUT ME. THIS IS JUST SOME FILLER FOR A TEST. BLAH BLAH
-          BLAH
-        </p>
-      </Grow>
+      <Waypoint onEnter={() => setAnimate1(true)}>
+        <Grow in={animate1} timeout={650}>
+          <h1>test</h1>
+        </Grow>
+      </Waypoint>
+      <Waypoint onEnter={() => setAnimate2(true)}>
+        <Grow in={animate2} timeout={1550}>
+          <h3>
+            THIS IS SOME RANDOM FILLER STUFF ABOUT ME IM JUST FILLING IT WITH
+            SOME TEXT
+          </h3>
+        </Grow>
+      </Waypoint>
     </div>
   );
 }

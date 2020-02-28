@@ -22,7 +22,14 @@ function App() {
     []
   );
 
-  const [animate, setAnimate] = useState(false);
+  // const [animate, setAnimate] = useState({
+  //   about: false,
+  //   projects: false,
+  //   contact: false
+  // });
+  const [aniAbout, setAniAbout] = useState(false);
+  // const [aniProjects, setAniProjects] = useState(false);
+  // const [aniContact, setAniContact] = useState(false);
 
   return (
     <ThemeProvider theme={theme}>
@@ -32,9 +39,8 @@ function App() {
         <button>
           <a href="#testing">ASDFYASIDFI CLICK</a>
         </button>
-
-        <Waypoint onEnter={() => setAnimate(true)}>
-          <Zoom in={animate} timeout={650}>
+        <Waypoint onEnter={() => setAniAbout(true)}>
+          <Zoom in={aniAbout} timeout={650}>
             <h1 id="test">test</h1>
           </Zoom>
         </Waypoint>
@@ -98,13 +104,185 @@ function App() {
         <br />
         <br />
         <br />
-
-        <Waypoint onEnter={() => setAnimate(true)}>
-          <About animate={animate} setAnimate={setAnimate} />
-        </Waypoint>
-
+        <About />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <Projects />
-        <Contact />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <Contact /> <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <div id="testing">hash test</div>
       </div>
     </ThemeProvider>
