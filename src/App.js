@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
@@ -30,6 +30,18 @@ function App() {
   const [aniAbout, setAniAbout] = useState(false);
   // const [aniProjects, setAniProjects] = useState(false);
   // const [aniContact, setAniContact] = useState(false);
+
+  let y = window.scrollY;
+  // console.log("scroll!", y);
+  // useEffect(() => {
+  //   y = window.scrollY;
+  // }, [y])
+
+  // window.addEventListener("scroll", function() {
+  //   console.log("hi");
+  //   y = window.scrollY;
+  //   console.log('y', y)
+  // });
 
   return (
     <ThemeProvider theme={theme}>

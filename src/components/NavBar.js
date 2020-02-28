@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   makeStyles,
   Toolbar,
   AppBar,
   Typography,
   useScrollTrigger,
-  Slide
+  Slide,
+  Button
 } from "@material-ui/core";
 import PropTypes from "prop-types";
 import logo from "./logo-32.png";
@@ -43,13 +44,20 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
   },
-  appBar: {
+  show: {
     backgroundColor: "#ffffff",
     color: "#000000"
   },
-  toolBar: {
-    display: "flex",
-    justifyContent: "space-around"
+  toolBar: {},
+  icon: {
+    marginRight: "auto",
+    marginLeft: 25
+  },
+  miniContainer: {
+    marginLeft: "auto"
+  },
+  links: {
+    paddingRight: 15
   }
 }));
 
@@ -60,58 +68,79 @@ export default function NavBar(props) {
     scroll.scrollToTop();
   };
 
+  // let y = window.scrollY;
+  // console.log("scroll!", y);
+  // useEffect(() => {
+  //   y = window.scrollY;
+  // }, [y])
+
+  const [y, setY] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => setY(window.pageYOffset));
+
+    return () =>
+      window.removeEventListener("scroll", () => setY(window.pageYOffset));
+  }, []);
+
   return (
     <div className={classes.root}>
       <HideOnScroll {...props}>
-        <AppBar className={classes.appBar}>
+        <AppBar className={classes.show} elevation={y === 0 ? 0 : 4}>
           <Toolbar className={classes.toolBar}>
             <Slide in={true} timeout={450}>
               <img
+                className={classes.icon}
                 src={logo}
                 onClick={() => scrollToTop()}
                 style={{ cursor: "pointer" }}
               />
             </Slide>
+            {/* <div className={classes.miniContainer}> */}
             <Slide in={true} timeout={950}>
-              <Link
-                style={{ cursor: "pointer" }}
-                activeClass="active"
-                className="scroll-link"
-                to="about"
-                spy={true}
-                smooth={true}
-                duration={500}
-              >
-                About
-              </Link>
+              <Button className={classes.links}>
+                <Link
+                  style={{ cursor: "pointer" }}
+                  activeClass="active"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  About
+                </Link>
+              </Button>
             </Slide>
             <Slide in={true} timeout={1150}>
-              <Link
-                style={{ cursor: "pointer" }}
-                activeClass="active"
-                className="scroll-link"
-                to="projects"
-                spy={true}
-                smooth={true}
-                duration={500}
-              >
-                Projects
-              </Link>
+              <Button className={classes.links}>
+                <Link
+                  style={{ cursor: "pointer" }}
+                  activeClass="active"
+                  to="projects"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  Projects
+                </Link>
+              </Button>
             </Slide>
             {/* <Link>Experience</Link> */}
             <Slide in={true} timeout={1350}>
-              <Link
-                style={{ cursor: "pointer" }}
-                activeClass="active"
-                className="scroll-link"
-                to="contact"
-                spy={true}
-                smooth={true}
-                duration={500}
-              >
-                Contact
-              </Link>
+              <Button className={classes.links}>
+                <Link
+                  style={{ cursor: "pointer" }}
+                  activeClass="active"
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  Contact
+                </Link>
+              </Button>
             </Slide>
+            {/* </div> */}
           </Toolbar>
         </AppBar>
       </HideOnScroll>
