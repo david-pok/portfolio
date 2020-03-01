@@ -16,106 +16,19 @@ function App() {
     () =>
       createMuiTheme({
         typography: {
-          fontFamily: "Heebo, sans-serif"
+          fontFamily: 'Montserrat', 
         }
       }),
     []
   );
 
-  // const [animate, setAnimate] = useState({
-  //   about: false,
-  //   projects: false,
-  //   contact: false
-  // });
-  const [aniAbout, setAniAbout] = useState(false);
-  // const [aniProjects, setAniProjects] = useState(false);
-  // const [aniContact, setAniContact] = useState(false);
-
-  let y = window.scrollY;
-  // console.log("scroll!", y);
-  // useEffect(() => {
-  //   y = window.scrollY;
-  // }, [y])
-
-  // window.addEventListener("scroll", function() {
-  //   console.log("hi");
-  //   y = window.scrollY;
-  //   console.log('y', y)
-  // });
-
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
         <NavBar />
-        <h1>asdfsadf</h1>
-        <button>
-          <a href="#testing">ASDFYASIDFI CLICK</a>
-        </button>
-        <Waypoint onEnter={() => setAniAbout(true)}>
-          <Zoom in={aniAbout} timeout={650}>
-            <h1 id="test">test</h1>
-          </Zoom>
-        </Waypoint>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        {/* <button>
+          <a href="#testing">click to scroll to testing</a>
+        </button> */}
         <About />
         <br />
         <br />

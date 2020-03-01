@@ -44,20 +44,30 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
   },
-  show: {
+  nav: {
     backgroundColor: "#ffffff",
     color: "#000000"
+    // padding: "2%"
   },
-  toolBar: {},
+  toolBar: {
+    padding: "1%"
+  },
+  hidden: {
+    padding: "1%"
+  },
   icon: {
     marginRight: "auto",
-    marginLeft: 25
+    marginLeft: "7%"
   },
   miniContainer: {
     marginLeft: "auto"
   },
   links: {
-    paddingRight: 15
+    paddingRight: 20
+  },
+  lastLink: {
+    paddingRight: 0,
+    marginRight: "7%"
   }
 }));
 
@@ -86,7 +96,7 @@ export default function NavBar(props) {
   return (
     <div className={classes.root}>
       <HideOnScroll {...props}>
-        <AppBar className={classes.show} elevation={y === 0 ? 0 : 4}>
+        <AppBar className={classes.nav} elevation={y === 0 ? 0 : 4}>
           <Toolbar className={classes.toolBar}>
             <Slide in={true} timeout={450}>
               <img
@@ -127,7 +137,7 @@ export default function NavBar(props) {
             </Slide>
             {/* <Link>Experience</Link> */}
             <Slide in={true} timeout={1350}>
-              <Button className={classes.links}>
+              <Button className={classes.lastLink}>
                 <Link
                   style={{ cursor: "pointer" }}
                   activeClass="active"
@@ -144,7 +154,7 @@ export default function NavBar(props) {
           </Toolbar>
         </AppBar>
       </HideOnScroll>
-      <Toolbar />
+      <Toolbar className={classes.hidden} />
     </div>
   );
 }
