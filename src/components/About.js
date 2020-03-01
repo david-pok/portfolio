@@ -11,16 +11,31 @@ const useStyles = makeStyles(theme => ({
     paddingRight: "20%",
     marginTop: 150,
     marginBottom: 150,
-    [theme.breakpoints.down("lg")]: {
-      paddingLeft: "15%",
-      paddingRight: "15%",
+    [theme.breakpoints.down(1200)]: {
+      paddingLeft: "18%",
+      paddingRight: "18%",
       border: "1px solid blue",
     },
-    [theme.breakpoints.down("md")]: {
-      paddingLeft: "5%",
-      paddingRight: "5%",
+    [theme.breakpoints.down(1000)]: {
+      paddingLeft: "15%",
+      paddingRight: "15%",
       border: "1px solid green",
-    }
+    },
+    [theme.breakpoints.down(900)]: {
+      paddingLeft: "13%",
+      paddingRight: "13%",
+      border: "1px solid orange",
+    },
+    [theme.breakpoints.down(780)]: {
+      paddingLeft: "10%",
+      paddingRight: "10%",
+      border: "1px solid black",
+    },
+    [theme.breakpoints.down(450)]: {
+      paddingLeft: "7%",
+      paddingRight: "7%",
+      border: "1px solid teal",
+    },
   },
   typos: {
     paddingBottom: 10
