@@ -15,27 +15,32 @@ const useStyles = makeStyles(theme => ({
       paddingLeft: "18%",
       paddingRight: "18%",
       border: "1px solid blue",
+      marginTop: 120
     },
     [theme.breakpoints.down(1000)]: {
       paddingLeft: "15%",
       paddingRight: "15%",
       border: "1px solid green",
+      marginTop: 90
     },
     [theme.breakpoints.down(900)]: {
       paddingLeft: "13%",
       paddingRight: "13%",
       border: "1px solid orange",
+      marginTop: 90
     },
     [theme.breakpoints.down(780)]: {
       paddingLeft: "10%",
       paddingRight: "10%",
       border: "1px solid black",
+      marginTop: 80
     },
     [theme.breakpoints.down(450)]: {
       paddingLeft: "7%",
       paddingRight: "7%",
       border: "1px solid teal",
-    },
+      marginTop: 50
+    }
   },
   typos: {
     paddingBottom: 10
@@ -52,46 +57,52 @@ export default function About(props) {
   const classes = useStyles();
 
   return (
-    <div className={classes.about}>
-      <Waypoint onEnter={() => setAnimate(true)}>
-        <Grow in={animate} timeout={650}>
-          <Typography variant="h3" align="left">
-            About me:
-          </Typography>
-        </Grow>
-      </Waypoint>
-      <br />
-      <Waypoint onEnter={() => setAnimate(true)}>
-        <Grow in={animate} timeout={1550}>
-          <Typography align="left" className={classes.typos}>
-            Hi, my name is
-          </Typography>
-        </Grow>
-      </Waypoint>
-      <Waypoint onEnter={() => setAnimate(true)}>
-        <Grow in={animate} timeout={1950}>
-          <Typography variant="h2" align="left" className={classes.name}>
-            David Pok.
-          </Typography>
-        </Grow>
-      </Waypoint>
-      <Waypoint onEnter={() => setAnimate(true)}>
-        <Grow in={animate} timeout={1950}>
-          <Typography align="left" className={classes.typos}>
-            I'm a full stack software developer and currently based in Los
-            Angeles, CA.
-          </Typography>
-        </Grow>
-      </Waypoint>
+    <div className="about">
+      <div className={classes.about}>
+        <Waypoint onEnter={() => setAnimate(true)}>
+          <Grow in={animate} timeout={650}>
+            <Typography variant="h3" align="left">
+              About me:
+            </Typography>
+          </Grow>
+        </Waypoint>
 
-      <Waypoint onEnter={() => setAnimate(true)}>
-        <Grow in={animate} timeout={2350}>
-          <Typography align="left" className={classes.typos}>
-            I mostly program with Javascript and am experienced in many other
-            languages.
-          </Typography>
-        </Grow>
-      </Waypoint>
+        <br />
+
+        <Waypoint onEnter={() => setAnimate(true)}>
+          <Grow in={animate} timeout={1550}>
+            <Typography align="left" className={classes.typos}>
+              Hi, my name is
+            </Typography>
+          </Grow>
+        </Waypoint>
+
+        <Waypoint onEnter={() => setAnimate(true)}>
+          <Grow in={animate} timeout={1950}>
+            <Typography variant="h2" align="left" className={classes.name}>
+              David Pok.
+            </Typography>
+          </Grow>
+        </Waypoint>
+
+        <Waypoint onEnter={() => setAnimate(true)}>
+          <Grow in={animate} timeout={1950}>
+            <Typography align="left" className={classes.typos}>
+              I'm a full stack software developer and currently based in Los
+              Angeles, CA.
+            </Typography>
+          </Grow>
+        </Waypoint>
+
+        <Waypoint onEnter={() => setAnimate(true)}>
+          <Grow in={animate} timeout={2350}>
+            <Typography align="left" className={classes.typos}>
+              I mostly program with Javascript and am experienced in many other
+              languages.
+            </Typography>
+          </Grow>
+        </Waypoint>
+      </div>
     </div>
   );
 }
