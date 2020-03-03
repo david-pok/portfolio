@@ -1,15 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
-import { ThemeProvider } from "@material-ui/core/styles";
-import { createMuiTheme } from "@material-ui/core/styles";
-import { Typography } from "@material-ui/core";
+import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+// import { createMuiTheme } from "@material-ui/core/styles";
 import NavBar from "./components/NavBar";
+import Intro from "./components/Intro";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import { Grow } from "@material-ui/core/";
-import Zoom from "@material-ui/core/Zoom";
-import { Waypoint } from "react-waypoint";
+
 
 function App() {
   const theme = React.useMemo(
@@ -26,6 +24,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
         <NavBar />
+        <Intro />
         {/* <button>
           <a href="#testing">click to scroll to testing</a>
         </button> */}

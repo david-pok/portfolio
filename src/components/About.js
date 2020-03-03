@@ -1,44 +1,44 @@
 import React, { useState } from "react";
 import { Grow, makeStyles, Typography } from "@material-ui/core/";
-
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import "./components.css";
 import { Waypoint } from "react-waypoint";
 
 const useStyles = makeStyles(theme => ({
   about: {
-    border: "1px solid red",
-    paddingLeft: "20%",
-    paddingRight: "20%",
+    // border: "1px solid red",
+    paddingLeft: "23%",
+    paddingRight: "23%",
     marginTop: 150,
     marginBottom: 150,
     [theme.breakpoints.down(1200)]: {
       paddingLeft: "18%",
       paddingRight: "18%",
-      border: "1px solid blue",
+      // border: "1px solid blue",
       marginTop: 120
     },
     [theme.breakpoints.down(1000)]: {
       paddingLeft: "15%",
       paddingRight: "15%",
-      border: "1px solid green",
+      // border: "1px solid green",
       marginTop: 90
     },
     [theme.breakpoints.down(900)]: {
       paddingLeft: "13%",
       paddingRight: "13%",
-      border: "1px solid orange",
+      // border: "1px solid orange",
       marginTop: 90
     },
     [theme.breakpoints.down(780)]: {
       paddingLeft: "10%",
       paddingRight: "10%",
-      border: "1px solid black",
+      // border: "1px solid black",
       marginTop: 80
     },
     [theme.breakpoints.down(450)]: {
       paddingLeft: "7%",
       paddingRight: "7%",
-      border: "1px solid teal",
+      // border: "1px solid teal",
       marginTop: 50
     }
   },
@@ -47,13 +47,22 @@ const useStyles = makeStyles(theme => ({
   },
   name: {
     paddingBottom: 30
+  },
+  lambda: {
+    color: "#ec3944",
+    textDecoration: "none"
+  },
+  aboutHeader: {
+    marginBottom: 50
+  },
+  icons: {
+    // marginTop: 10
   }
 }));
 
-export default function About(props) {
+export default function About() {
   const [animate, setAnimate] = useState(false);
 
-  console.log("about props", props);
   const classes = useStyles();
 
   return (
@@ -61,26 +70,50 @@ export default function About(props) {
       <div className={classes.about}>
         <Waypoint onEnter={() => setAnimate(true)}>
           <Grow in={animate} timeout={650}>
-            <Typography variant="h3" align="left">
+            <Typography variant="h3" align="left" className={classes.aboutHeader}>
               About me:
             </Typography>
           </Grow>
         </Waypoint>
 
-        <br />
 
         <Waypoint onEnter={() => setAnimate(true)}>
           <Grow in={animate} timeout={1550}>
             <Typography align="left" className={classes.typos}>
-              Hi, my name is
+              I'm a full stack software developer currently based in Los
+              Angeles, California. I spend most of my time coding with
+              Javascript and am experienced in a few others. I enjoy building
+              beautiful and functional web apps.
             </Typography>
           </Grow>
         </Waypoint>
 
         <Waypoint onEnter={() => setAnimate(true)}>
           <Grow in={animate} timeout={1950}>
-            <Typography variant="h2" align="left" className={classes.name}>
-              David Pok.
+            <Typography align="left" className={classes.name}>
+              I am a graduate and forever student of{" "}
+              <a className={classes.lambda} href="https://lambdaschool.com/">
+                Lambda
+              </a>
+              . Here are a few technologies I've learned to use during my time there:
+            </Typography>
+          </Grow>
+        </Waypoint>
+        
+        <Waypoint onEnter={() => setAnimate(true)}>
+          <Grow in={animate} timeout={1950}>
+            <Typography align="left" className={classes.typos}>
+            <ArrowRightIcon fontSize='inherit'></ArrowRightIcon>
+              JavasScript
+            </Typography>
+          </Grow>
+        </Waypoint>
+        
+        <Waypoint onEnter={() => setAnimate(true)}>
+          <Grow in={animate} timeout={1950}>
+            <Typography align="left" className={classes.typos}>
+            <ArrowRightIcon fontSize='inherit'></ArrowRightIcon>
+              Node
             </Typography>
           </Grow>
         </Waypoint>
@@ -88,20 +121,39 @@ export default function About(props) {
         <Waypoint onEnter={() => setAnimate(true)}>
           <Grow in={animate} timeout={1950}>
             <Typography align="left" className={classes.typos}>
-              I'm a full stack software developer and currently based in Los
-              Angeles, CA.
+            <ArrowRightIcon fontSize='inherit'></ArrowRightIcon>
+              Express
             </Typography>
           </Grow>
         </Waypoint>
 
         <Waypoint onEnter={() => setAnimate(true)}>
-          <Grow in={animate} timeout={2350}>
+          <Grow in={animate} timeout={1950}>
             <Typography align="left" className={classes.typos}>
-              I mostly program with Javascript and am experienced in many other
-              languages.
+            <ArrowRightIcon fontSize='inherit'></ArrowRightIcon>
+              Python
             </Typography>
           </Grow>
         </Waypoint>
+
+        <Waypoint onEnter={() => setAnimate(true)}>
+          <Grow in={animate} timeout={1950}>
+            <Typography align="left" className={classes.typos}>
+            <ArrowRightIcon fontSize='inherit'></ArrowRightIcon>
+              HTML & CSS
+            </Typography>
+          </Grow>
+        </Waypoint>
+
+        <Waypoint onEnter={() => setAnimate(true)}>
+          <Grow in={animate} timeout={1950}>
+            <Typography align="left" className={classes.typos}>
+            <ArrowRightIcon fontSize='inherit'></ArrowRightIcon>
+              React
+            </Typography>
+          </Grow>
+        </Waypoint>
+
       </div>
     </div>
   );
