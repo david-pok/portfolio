@@ -91,9 +91,9 @@ export default function About() {
         <Waypoint onEnter={() => setAnimate(true)}>
           <Grow in={animate} timeout={1950}>
             <Typography align="left" className={classes.name}>
-              I am a graduate and forever student of{" "}
+              I am a student and graduate of{" "}
               <a className={classes.lambda} href="https://lambdaschool.com/">
-                Lambda
+                Lambda School
               </a>
               . Here are a few technologies I've learned to use during my time there:
             </Typography>
