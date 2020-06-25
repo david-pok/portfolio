@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-// import { createMuiTheme } from "@material-ui/core/styles";
 import NavBar from "./components/NavBar";
 import Intro from "./components/Intro";
 import About from "./components/About";
