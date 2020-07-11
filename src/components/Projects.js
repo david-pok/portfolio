@@ -26,6 +26,14 @@ export default function Projects() {
             </Typography>
           </Grow>
         </Waypoint>
+
+        <Waypoint onEnter={() => setAnimate2(true)}>
+          <Grow in={animate2} timeout={800}>
+            <Typography variant="h3" align="left">
+              first project
+            </Typography>
+          </Grow>
+        </Waypoint>
       </div>
     </div>
   );
