@@ -7,8 +7,8 @@ import { Waypoint } from "react-waypoint";
 const useStyles = makeStyles(theme => ({
   about: {
     // border: "1px solid red",
-    paddingLeft: "23%",
-    paddingRight: "23%",
+    paddingLeft: "20%",
+    paddingRight: "20%",
     marginTop: 150,
     marginBottom: 150,
     [theme.breakpoints.down(1200)]: {
