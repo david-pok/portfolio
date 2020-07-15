@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import { Grow, makeStyles, Typography, Grid } from "@material-ui/core/";
+import { Grow, makeStyles, Typography, Box, Grid } from "@material-ui/core/";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import { Waypoint } from "react-waypoint";
 import Citric from "../content/citric.jpg";
+import Songify from "../content/songify.png";
 
 const useStyles = makeStyles((theme) => ({
   projects: {
@@ -9,26 +12,72 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: "20%",
     marginTop: 150,
     marginBottom: 150,
-
   },
-  projHeader: {
+  containerHeader: {
     marginBottom: 20,
     marginTop: 50,
     [theme.breakpoints.down(600)]: {
-      marginTop: 10,
+      marginTop: -5,
     },
   },
-  projDes: {
-    marginRight: "2%",
+  citTitle: {
+    marginBottom: 20,
+    marginTop: 50,
+    [theme.breakpoints.down(600)]: {
+      marginTop: -10,
+    },
   },
-  projContainer: {
+  songTitle: {
+    marginBottom: 20,
+    marginTop: 25,
+    [theme.breakpoints.down(600)]: {
+      // paddingBottom: -50,
+    },
+  },
+  citDes: {
+    // marginRight: "2%",
+    paddingBottom: 25,
+  },
+  songDes: {
+    // marginRight: "2%",
+    paddingBottom: 25,
+  },
+  citContainer: {
+    height: "100%",
     marginTop: 100,
     marginBottom: 100,
-
   },
-  projPic: {
+  songContainer: {
+    height: "100%",
+    marginTop: 100,
+    marginBottom: 100,
+  },
+  citPic: {
     width: "100%",
     height: "100%",
+    [theme.breakpoints.down(600)]: {
+      marginBottom: -10,
+    },
+  },
+  songPic: {
+    width: "100%",
+    height: "100%",
+    [theme.breakpoints.down(600)]: {
+      // marginTop: -50,
+      // paddingTop: -50,
+      paddingTop: 0,
+    },
+  },
+  linksContainer1: {
+    float: "right",
+    // marginTop: "100",
+  },
+  linksContainer2: {
+    float: "left",
+    // paddingTop: "100",
+    // [theme.breakpoints.down(600)]: {
+    //   paddingBottom: -100,
+    // },
   },
 }));
 
@@ -46,37 +95,55 @@ export default function Projects() {
             <Typography
               variant="h3"
               align="left"
-              className={classes.projHeader}
+              className={classes.containerHeader}
             >
-              A couple of my projects:
+              <Box fontWeight="fontWeightBold">A couple of my projects:</Box>
             </Typography>
           </Grow>
         </Waypoint>
 
         <Waypoint onEnter={() => setAnimate2(true)}>
           <Grow in={animate2} timeout={900}>
-            <div className={classes.projContainer}>
-              <Grid container spacing={1}>
+            <div className={classes.citContainer}>
+              <Grid container spacing={7}>
                 <Grid item xs={12} sm={6}>
-                  <img src={Citric} className={classes.projPic} />
+                  <a>
+                    <img src={Citric} className={classes.citPic} />
+                  </a>
                 </Grid>
                 <Grid item xs={12} sm={6}>
                   <Typography
                     variant="h4"
                     align="right"
-                    className={classes.projHeader}
+                    className={classes.citTitle}
                   >
-                    Citrics
+                    <Box fontWeight="fontWeightBold">Citrics</Box>
                   </Typography>
                   <Typography
-                    variant="body1"
+                    variant="subtitle1"
                     align="right"
-                    className={classes.projDes}
+                    className={classes.citDes}
                   >
                     For the young professionals who are looking to relocate.
                     Citrics is an app that helps you relocate based on your
                     requirements, and lets you view and compare city data.
                   </Typography>
+                  {/* <Grid item xs={3} style={{paddingTop:'100'}}>
+                    <a>
+                      <GitHubIcon />
+                    </a>
+                    <a>
+                      <ExitToAppIcon style={{ paddingLeft: "20" }} />
+                    </a>
+                  </Grid> */}
+                  <div className={classes.linksContainer1}>
+                    <a>
+                      <GitHubIcon />
+                    </a>
+                    <a>
+                      <ExitToAppIcon style={{ paddingLeft: "20" }} />
+                    </a>
+                  </div>
                 </Grid>
               </Grid>
             </div>
@@ -85,28 +152,41 @@ export default function Projects() {
 
         <Waypoint onEnter={() => setAnimate3(true)}>
           <Grow in={animate2} timeout={1150}>
-            <div className={classes.projContainer}>
-              <Grid container spacing={1}>
+            <div className={classes.songContainer}>
+              <Grid container spacing={7}>
                 <Grid item xs={12} sm={6}>
                   <Typography
                     variant="h4"
                     align="left"
-                    className={classes.projHeader}
+                    className={classes.songTitle}
                   >
-                    Citrics
+                    <Box fontWeight="fontWeightBold">Songify</Box>
                   </Typography>
                   <Typography
-                    variant="body1"
+                    variant="subtitle1"
                     align="left"
-                    className={classes.projDes}
+                    className={classes.songDes}
                   >
-                    For the young professionals who are looking to relocate.
-                    Citrics is an app that helps you relocate based on your
-                    requirements, and lets you view and compare city data.
+                    For music lovers who want to discover and find new music.
+                    Simply input your song of choice and find suggestions based
+                    off the Spotify API.
                   </Typography>
+                  <div className={classes.linksContainer2}>
+                    <a
+                      href="https://github.com/Build-Week-Spotify-1/Web-Front-End"
+                      target="_blank"
+                    >
+                      <GitHubIcon style={{ paddingRight: "20" }} />
+                    </a>
+                    <a href="https://songify.now.sh/" target="_blank">
+                      <ExitToAppIcon />
+                    </a>
+                  </div>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                  <img src={Citric} className={classes.projPic} />
+                  <a href="https://songify.now.sh/">
+                    <img src={Songify} className={classes.songPic} />
+                  </a>
                 </Grid>
               </Grid>
             </div>

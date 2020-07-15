@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Grow, makeStyles, Typography } from "@material-ui/core/";
+import { Grow, makeStyles, Typography, Box } from "@material-ui/core/";
 import { Waypoint } from "react-waypoint";
 
 const useStyles = makeStyles(theme => ({
@@ -71,7 +71,7 @@ export default function Intro() {
       <Waypoint onEnter={() => setAnimate(true)}>
         <Grow in={animate} timeout={1950}>
           <Typography variant="h1" align="left" className={classes.name}>
-            David Pok.
+          <Box fontWeight="fontWeightBold">David Pok.</Box>
           </Typography>
         </Grow>
       </Waypoint>

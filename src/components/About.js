@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Grow, makeStyles, Typography } from "@material-ui/core/";
+import { Grow, makeStyles, Typography, Box } from "@material-ui/core/";
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import "./components.css";
 import { Waypoint } from "react-waypoint";
@@ -71,7 +71,7 @@ export default function About() {
         <Waypoint onEnter={() => setAnimate(true)}>
           <Grow in={animate} timeout={650}>
             <Typography variant="h3" align="left" className={classes.aboutHeader}>
-              About me:
+            <Box fontWeight="fontWeightBold">About me:</Box>
             </Typography>
           </Grow>
         </Waypoint>

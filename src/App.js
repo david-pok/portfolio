@@ -13,6 +13,7 @@ function App() {
       createMuiTheme({
         typography: {
           fontFamily: "Montserrat",
+          fontSize: 16,
         },
       }),
     []
