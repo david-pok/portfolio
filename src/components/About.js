@@ -105,7 +105,7 @@ export default function About() {
           <Grow in={animate} timeout={1950}>
             <Typography align="left" className={classes.typos}>
               <ArrowRightIcon fontSize="inherit"></ArrowRightIcon>
-              JavasScript
+              JavaScript
             </Typography>
           </Grow>
         </Waypoint>

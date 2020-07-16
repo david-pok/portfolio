@@ -45,6 +45,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(550)]: {
       paddingLeft: 5,
     },
+    [theme.breakpoints.down(350)]: {
+      paddingLeft: 0,
+    },
   },
 }));
 

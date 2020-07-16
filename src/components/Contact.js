@@ -83,7 +83,7 @@ export default function Contact() {
         <Grow in={animate1} timeout={1250}>
           <Button variant="outlined" className={classes.contButton}>
             <a
-              href="mailto:someone@yoursite.com"
+              href="mailto:david.pok@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
