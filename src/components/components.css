@@ -1,9 +1,12 @@
 .about {
-
-  padding: 5% 0 8% 0;
+  padding: 5% 0 10% 0;
 }
 
 .projects {
-  
-  padding: 5% 0 8% 0;
+  padding: 5% 0 10% 0;
+}
+
+.contact {
+  padding-top: 10%;
+  margin-bottom: 10%;
 }

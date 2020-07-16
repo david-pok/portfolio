@@ -24,16 +24,9 @@ function App() {
       <div className="App">
         <NavBar />
         <Intro />
-        {/* <button>
-          <a href="#testing">click to scroll to testing</a>
-        </button> */}
         <About />
-
         <Projects />
-
         <Contact />
-
-        <div id="testing">hash test</div>
       </div>
     </ThemeProvider>
   );

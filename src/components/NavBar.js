@@ -3,21 +3,13 @@ import {
   makeStyles,
   Toolbar,
   AppBar,
-  Typography,
   useScrollTrigger,
   Slide,
-  Button
+  Button,
 } from "@material-ui/core";
 import PropTypes from "prop-types";
-import logo from "./logo-32.png";
-import {
-  Link,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller
-} from "react-scroll";
+import logo from "../content/logo-32.png";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -32,7 +24,7 @@ function HideOnScroll(props) {
 }
 
 HideOnScroll.propTypes = {
-  children: PropTypes.element.isRequired
+  children: PropTypes.element.isRequired,
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
@@ -40,35 +32,34 @@ HideOnScroll.propTypes = {
   // window: PropTypes.func
 };
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   nav: {
     backgroundColor: "#ffffff",
-    color: "#000000"
-    // padding: "2%"
+    color: "#000000",
   },
   toolBar: {
-    padding: "1%"
+    padding: "1%",
   },
   hidden: {
-    padding: "1%"
+    padding: "1%",
   },
   icon: {
     marginRight: "auto",
-    marginLeft: "7%"
+    marginLeft: "7%",
   },
   miniContainer: {
-    marginLeft: "auto"
+    marginLeft: "auto",
   },
   links: {
-    paddingRight: 20
+    paddingRight: 20,
   },
   lastLink: {
     paddingRight: 0,
-    marginRight: "7%"
-  }
+    marginRight: "7%",
+  },
 }));
 
 export default function NavBar(props) {
@@ -77,12 +68,6 @@ export default function NavBar(props) {
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
-
-  // let y = window.scrollY;
-  // console.log("scroll!", y);
-  // useEffect(() => {
-  //   y = window.scrollY;
-  // }, [y])
 
   const [y, setY] = useState(0);
 
@@ -106,7 +91,6 @@ export default function NavBar(props) {
                 style={{ cursor: "pointer" }}
               />
             </Slide>
-            {/* <div className={classes.miniContainer}> */}
             <Slide in={true} timeout={950}>
               <Button className={classes.links}>
                 <Link
@@ -135,7 +119,6 @@ export default function NavBar(props) {
                 </Link>
               </Button>
             </Slide>
-            {/* <Link>Experience</Link> */}
             <Slide in={true} timeout={1350}>
               <Button className={classes.lastLink}>
                 <Link
@@ -150,7 +133,6 @@ export default function NavBar(props) {
                 </Link>
               </Button>
             </Slide>
-            {/* </div> */}
           </Toolbar>
         </AppBar>
       </HideOnScroll>

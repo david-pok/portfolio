@@ -30,16 +30,11 @@ const useStyles = makeStyles((theme) => ({
   songTitle: {
     marginBottom: 20,
     marginTop: 25,
-    [theme.breakpoints.down(600)]: {
-      // paddingBottom: -50,
-    },
   },
   citDes: {
-    // marginRight: "2%",
     paddingBottom: 25,
   },
   songDes: {
-    // marginRight: "2%",
     paddingBottom: 25,
   },
   citContainer: {
@@ -63,21 +58,14 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: "100%",
     [theme.breakpoints.down(600)]: {
-      // marginTop: -50,
-      // paddingTop: -50,
       paddingTop: 0,
     },
   },
   linksContainer1: {
     float: "right",
-    // marginTop: "100",
   },
   linksContainer2: {
     float: "left",
-    // paddingTop: "100",
-    // [theme.breakpoints.down(600)]: {
-    //   paddingBottom: -100,
-    // },
   },
 }));
 
@@ -128,14 +116,7 @@ export default function Projects() {
                     Citrics is an app that helps you relocate based on your
                     requirements, and lets you view and compare city data.
                   </Typography>
-                  {/* <Grid item xs={3} style={{paddingTop:'100'}}>
-                    <a>
-                      <GitHubIcon />
-                    </a>
-                    <a>
-                      <ExitToAppIcon style={{ paddingLeft: "20" }} />
-                    </a>
-                  </Grid> */}
+
                   <div className={classes.linksContainer1}>
                     <a>
                       <GitHubIcon />
@@ -184,7 +165,7 @@ export default function Projects() {
                   </div>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                  <a href="https://songify.now.sh/">
+                  <a href="https://songify.now.sh/" target="_blank">
                     <img src={Songify} className={classes.songPic} />
                   </a>
                 </Grid>
