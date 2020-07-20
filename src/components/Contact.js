@@ -61,7 +61,7 @@ export default function Contact() {
             align="center"
             className={classes.contHeader}
           >
-            <Box fontWeight="fontWeightBold">Get in contact:</Box>
+            <Box fontWeight="fontWeightBold">Get in contact</Box>
           </Typography>
         </Grow>
       </Waypoint>
@@ -73,7 +73,7 @@ export default function Contact() {
             align="center"
             className={classes.contDesc}
           >
-            I'm open to queries. You can email me or checkout my other stuff by
+            I'm open to queries. You can email me or check out my other stuff by
             clicking below.
           </Typography>
         </Grow>

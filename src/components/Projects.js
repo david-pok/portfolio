@@ -108,6 +108,13 @@ export default function Projects() {
                     <Box fontWeight="fontWeightBold">Citrics</Box>
                   </Typography>
                   <Typography
+                    variant="subtitle2"
+                    align="right"
+                    className={classes.citDes}
+                  >
+                    React | Redux | Node | Express | Postgres
+                  </Typography>
+                  <Typography
                     variant="subtitle1"
                     align="right"
                     className={classes.citDes}
@@ -142,6 +149,13 @@ export default function Projects() {
                     className={classes.songTitle}
                   >
                     <Box fontWeight="fontWeightBold">Songify</Box>
+                  </Typography>
+                  <Typography
+                    variant="subtitle2"
+                    align="left"
+                    className={classes.citDes}
+                  >
+                    React | Redux | Node | Express | SQLite
                   </Typography>
                   <Typography
                     variant="subtitle1"
