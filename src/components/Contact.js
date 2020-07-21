@@ -67,7 +67,7 @@ export default function Contact() {
       </Waypoint>
 
       <Waypoint onEnter={() => setAnimate2(true)}>
-        <Grow in={animate1} timeout={900}>
+        <Grow in={animate2} timeout={900}>
           <Typography
             variant="body1"
             align="center"
@@ -80,7 +80,7 @@ export default function Contact() {
       </Waypoint>
 
       <Waypoint onEnter={() => setAnimate3(true)}>
-        <Grow in={animate1} timeout={1250}>
+        <Grow in={animate3} timeout={1250}>
           <Button variant="outlined" className={classes.contButton}>
             <a
               href="mailto:david.pok@gmail.com"
@@ -95,7 +95,7 @@ export default function Contact() {
       </Waypoint>
 
       <Waypoint onEnter={() => setAnimate4(true)}>
-        <Grow in={animate1} timeout={1500}>
+        <Grow in={animate4} timeout={1500}>
           <div className={classes.iconContainer}>
             <a
               href="https://github.com/david-pok"

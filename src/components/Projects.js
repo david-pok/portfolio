@@ -139,7 +139,7 @@ export default function Projects() {
         </Waypoint>
 
         <Waypoint onEnter={() => setAnimate3(true)}>
-          <Grow in={animate2} timeout={1150}>
+          <Grow in={animate3} timeout={1150}>
             <div className={classes.songContainer}>
               <Grid container spacing={7}>
                 <Grid item xs={12} sm={6}>
