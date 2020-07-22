@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Grow, makeStyles, Typography, Box } from "@material-ui/core/";
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
+
 import "./components.css";
 import { Waypoint } from "react-waypoint";
 
@@ -49,8 +50,7 @@ const useStyles = makeStyles((theme) => ({
   aboutHeader: {
     marginBottom: 50,
   },
-  icons: {
-  },
+  icons: {},
 }));
 
 export default function About() {
@@ -78,7 +78,7 @@ export default function About() {
             <Typography align="left" className={classes.typos}>
               I'm a full stack software developer currently based in Los
               Angeles, California. I spend most of my time coding with
-              Javascript and am experienced in a few others. I enjoy building
+              Javascript and am experienced in Python. I enjoy building
               beautiful and functional web apps.
             </Typography>
           </Grow>
@@ -95,7 +95,10 @@ export default function About() {
               >
                 Lambda School
               </a>
-              . Here are a few technologies I've learned to use during my time
+              .
+              <br />
+              <br />
+              Here are a few technologies I've learned to use during my time
               there:
             </Typography>
           </Grow>

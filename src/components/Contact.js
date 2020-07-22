@@ -73,8 +73,8 @@ export default function Contact() {
             align="center"
             className={classes.contDesc}
           >
-            I'm open to queries. You can email me or check out my other stuff by
-            clicking below.
+            I'm open to queries. Send me an email or click through to my GitHub
+            or LinkedIn to see what else I'm working on!
           </Typography>
         </Grow>
       </Waypoint>
@@ -120,7 +120,7 @@ export default function Contact() {
               href="https://github.com/david-pok/portfolio"
               className={classes.builtBy}
             >
-              <Typography>Built by David Pok</Typography>
+              <Typography>Built by David Pok | 2020</Typography>
             </a>
           </div>
         </Grow>

@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   projects: {
     paddingLeft: "20%",
     paddingRight: "20%",
-    marginTop: 150,
+    marginTop: 100,
     marginBottom: 150,
   },
   containerHeader: {
@@ -85,7 +85,7 @@ export default function Projects() {
               align="left"
               className={classes.containerHeader}
             >
-              <Box fontWeight="fontWeightBold">A couple of my projects:</Box>
+              <Box fontWeight="fontWeightBold">Recent projects:</Box>
             </Typography>
           </Grow>
         </Waypoint>
@@ -125,7 +125,10 @@ export default function Projects() {
                   </Typography>
 
                   <div className={classes.linksContainer1}>
-                    <a>
+                    <a
+                      href="https://github.com/Lambda-School-Labs/city-data-comparison-fe"
+                      target="_blank"
+                    >
                       <GitHubIcon />
                     </a>
                     <a>
