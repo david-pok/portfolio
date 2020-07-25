@@ -3,7 +3,7 @@ import { Grow, makeStyles, Typography, Box, Grid } from "@material-ui/core/";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import { Waypoint } from "react-waypoint";
-import Citric from "../content/citric.jpg";
+import Citric from "../content/citrics.png";
 import Songify from "../content/songify.png";
 
 const useStyles = makeStyles((theme) => ({
@@ -95,7 +95,10 @@ export default function Projects() {
             <div className={classes.citContainer}>
               <Grid container spacing={7}>
                 <Grid item xs={12} sm={6}>
-                  <a>
+                  <a
+                    href="https://city-data-comparison-fe-1.vercel.app/"
+                    target="_blank"
+                  >
                     <img src={Citric} className={classes.citPic} />
                   </a>
                 </Grid>
@@ -126,12 +129,15 @@ export default function Projects() {
 
                   <div className={classes.linksContainer1}>
                     <a
-                      href="https://github.com/Lambda-School-Labs/city-data-comparison-fe"
+                      href="https://github.com/david-pok/city-data-comparison-fe-1"
                       target="_blank"
                     >
                       <GitHubIcon />
                     </a>
-                    <a>
+                    <a
+                      href="https://city-data-comparison-fe-1.vercel.app/"
+                      target="_blank"
+                    >
                       <ExitToAppIcon style={{ paddingLeft: "20" }} />
                     </a>
                   </div>
