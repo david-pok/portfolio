@@ -96,7 +96,7 @@ export default function Projects() {
               <Grid container spacing={7}>
                 <Grid item xs={12} sm={6}>
                   <a
-                    href="https://city-data-comparison-fe-1.vercel.app/"
+                    href="https://citrics.vercel.app/"
                     target="_blank"
                   >
                     <img src={Citric} className={classes.citPic} />
@@ -135,7 +135,7 @@ export default function Projects() {
                       <GitHubIcon />
                     </a>
                     <a
-                      href="https://city-data-comparison-fe-1.vercel.app/"
+                      href="https://citrics.vercel.app/"
                       target="_blank"
                     >
                       <ExitToAppIcon style={{ paddingLeft: "20" }} />
